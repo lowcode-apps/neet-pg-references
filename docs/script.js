@@ -42,14 +42,29 @@ function loadPDF(pdfPath, title) {
     // Update title
     document.getElementById('pdf-title').textContent = title;
 
-    // Load PDF in iframe
-    const pdfFrame = document.getElementById('pdf-frame');
-    pdfFrame.src = pdfPath;
+    // Load PDF in object and embed tags
+    const pdfObject = document.getElementById('pdf-object');
+    const pdfEmbed = document.getElementById('pdf-embed');
 
-    // Update download link
+    // Add timestamp to prevent caching issues
+    const pdfUrl = pdfPath + '#toolbar=1&navpanes=1&scrollbar=1';
+
+    pdfObject.data = pdfUrl;
+    pdfEmbed.src = pdfUrl;
+
+    // Update all links
     const downloadLink = document.getElementById('download-link');
+    const openNewTab = document.getElementById('open-new-tab');
+    const fallbackDownload = document.getElementById('fallback-download');
+    const fallbackOpen = document.getElementById('fallback-open');
+
     downloadLink.href = pdfPath;
     downloadLink.download = title.replace(/\s+/g, '-') + '.pdf';
+
+    openNewTab.href = pdfPath;
+    fallbackDownload.href = pdfPath;
+    fallbackDownload.download = title.replace(/\s+/g, '-') + '.pdf';
+    fallbackOpen.href = pdfPath;
 
     // Update active nav link
     const navLinks = document.querySelectorAll('.nav-link');
@@ -58,9 +73,11 @@ function loadPDF(pdfPath, title) {
     });
 
     // Find and activate the clicked nav link
-    const clickedLink = event.target.closest('.nav-link');
-    if (clickedLink) {
-        clickedLink.classList.add('active');
+    if (typeof event !== 'undefined') {
+        const clickedLink = event.target.closest('.nav-link');
+        if (clickedLink) {
+            clickedLink.classList.add('active');
+        }
     }
 
     // Scroll to top
@@ -139,12 +156,20 @@ function trackPageView(pageName) {
 }
 */
 
-// PDF loading error handler
-document.getElementById('pdf-frame').addEventListener('error', function() {
-    alert('Error loading PDF. Please check if the file exists.');
-});
+// PDF loading handlers
+document.addEventListener('DOMContentLoaded', function() {
+    const pdfObject = document.getElementById('pdf-object');
+    const pdfEmbed = document.getElementById('pdf-embed');
 
-// Add loading indicator for PDFs
-document.getElementById('pdf-frame').addEventListener('load', function() {
-    console.log('PDF loaded successfully');
+    if (pdfObject) {
+        pdfObject.addEventListener('load', function() {
+            console.log('PDF loaded successfully in object tag');
+        });
+    }
+
+    if (pdfEmbed) {
+        pdfEmbed.addEventListener('load', function() {
+            console.log('PDF loaded successfully in embed tag');
+        });
+    }
 });

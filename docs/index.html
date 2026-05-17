@@ -190,6 +190,9 @@
                 <div class="pdf-header">
                     <h2 id="pdf-title">Loading PDF...</h2>
                     <div class="pdf-controls">
+                        <a id="open-new-tab" href="#" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Open in New Tab
+                        </a>
                         <a id="download-link" href="#" download class="btn btn-primary">
                             <i class="fas fa-download"></i> Download PDF
                         </a>
@@ -199,7 +202,22 @@
                     </div>
                 </div>
                 <div class="pdf-container">
-                    <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+                    <object id="pdf-object" type="application/pdf" data="">
+                        <embed id="pdf-embed" type="application/pdf" src="">
+                        <div class="pdf-fallback">
+                            <div class="fallback-content">
+                                <i class="fas fa-file-pdf fa-3x"></i>
+                                <h3>Unable to display PDF</h3>
+                                <p>Your browser doesn't support inline PDF viewing.</p>
+                                <a id="fallback-download" href="#" download class="btn btn-primary">
+                                    <i class="fas fa-download"></i> Download PDF
+                                </a>
+                                <a id="fallback-open" href="#" target="_blank" class="btn btn-secondary">
+                                    <i class="fas fa-external-link-alt"></i> Open in New Tab
+                                </a>
+                            </div>
+                        </div>
+                    </object>
                 </div>
             </div>
         </main>
