@@ -89,21 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show home section by default
     showSection('home');
 
-    // Add smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && !href.includes('onclick')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
+    // Add smooth scrolling (disabled to prevent conflicts with navigation)
+    // Navigation is handled by onclick handlers instead
 
     // Handle browser back button
     window.addEventListener('popstate', function(e) {
