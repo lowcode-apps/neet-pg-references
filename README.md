@@ -2,10 +2,27 @@
 
 This repository contains NEET PG (National Eligibility cum Entrance Test for Postgraduate) question papers and solved papers from the last 5 years (2021-2025) for exam preparation.
 
+## 🌐 View Online
+
+**[Visit the GitHub Pages Website](https://jagankumar-egov.github.io/neet-pg-references/)**
+
+Access all NEET PG question papers and solutions through our modern, user-friendly web interface:
+- 📱 Responsive design that works on all devices
+- 📄 In-browser PDF viewing
+- 🎯 Easy navigation between years and shifts
+- ⬇️ Quick download options
+- 🚀 Fast and lightweight
+
 ## Repository Structure
 
 ```
 neet-pg-references/
+├── docs/                # GitHub Pages website
+│   ├── index.html       # Main website page
+│   ├── styles.css       # Website styling
+│   ├── script.js        # Website functionality
+│   └── README.md        # Website documentation
+│
 ├── question-papers/     # Question papers only (for practice)
 │   ├── NEET-PG-2024-Shift-1-Question-Paper.pdf
 │   └── NEET-PG-2024-Shift-2-Question-Paper.pdf

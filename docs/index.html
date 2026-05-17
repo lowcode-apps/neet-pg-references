@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET PG References - Question Papers & Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1><i class="fas fa-graduation-cap"></i> NEET PG</h1>
+                <p class="subtitle">References</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home" class="nav-link active" onclick="showSection('home')">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="#about" class="nav-link" onclick="showSection('about')">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Question Papers</h3>
+                    <a href="#" class="nav-link" onclick="loadPDF('../question-papers/NEET-PG-2024-Shift-1-Question-Paper.pdf', 'NEET PG 2024 - Shift 1')">
+                        <i class="fas fa-file-pdf"></i> 2024 Shift 1
+                    </a>
+                    <a href="#" class="nav-link" onclick="loadPDF('../question-papers/NEET-PG-2024-Shift-2-Question-Paper.pdf', 'NEET PG 2024 - Shift 2')">
+                        <i class="fas fa-file-pdf"></i> 2024 Shift 2
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Solved Papers</h3>
+                    <a href="#" class="nav-link" onclick="loadPDF('../solved-papers/NEET-PG-2024-Shift-1-Question-Paper.pdf', 'NEET PG 2024 Shift 1 - Questions')">
+                        <i class="fas fa-file-pdf"></i> 2024 Shift 1 (Q)
+                    </a>
+                    <a href="#" class="nav-link" onclick="loadPDF('../solved-papers/NEET-PG-2024-Shift-1-Solutions.pdf', 'NEET PG 2024 Shift 1 - Solutions')">
+                        <i class="fas fa-check-circle"></i> 2024 Shift 1 (Sol)
+                    </a>
+                    <a href="#" class="nav-link" onclick="loadPDF('../solved-papers/NEET-PG-2024-Shift-2-Question-Paper.pdf', 'NEET PG 2024 Shift 2 - Questions')">
+                        <i class="fas fa-file-pdf"></i> 2024 Shift 2 (Q)
+                    </a>
+                    <a href="#" class="nav-link" onclick="loadPDF('../solved-papers/NEET-PG-2024-Shift-2-Solutions.pdf', 'NEET PG 2024 Shift 2 - Solutions')">
+                        <i class="fas fa-check-circle"></i> 2024 Shift 2 (Sol)
+                    </a>
+                    <a href="#" class="nav-link" onclick="loadPDF('../solved-papers/NEET-PG-2023-Question-Paper-With-Solutions.pdf', 'NEET PG 2023 with Solutions')">
+                        <i class="fas fa-file-pdf"></i> 2023 (Complete)
+                    </a>
+                    <a href="#" class="nav-link" onclick="loadPDF('../solved-papers/NEET-PG-2022-Question-Paper-With-Solutions.pdf', 'NEET PG 2022 with Solutions')">
+                        <i class="fas fa-file-pdf"></i> 2022 (Complete)
+                    </a>
+                    <a href="#" class="nav-link" onclick="loadPDF('../solved-papers/NEET-PG-2021-Question-Paper-With-Solutions.pdf', 'NEET PG 2021 with Solutions')">
+                        <i class="fas fa-file-pdf"></i> 2021 (Complete)
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="https://github.com/jagankumar-egov/neet-pg-references" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div id="home-section" class="content-section">
+                <div class="hero">
+                    <h1>NEET PG Question Papers & Solutions</h1>
+                    <p class="lead">Comprehensive collection of NEET PG exam papers from 2021-2024</p>
+                </div>
+
+                <div class="info-cards">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-file-pdf"></i></div>
+                        <h3>Question Papers</h3>
+                        <p>Practice papers for 2024 shifts</p>
+                        <span class="badge">2 Papers</span>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-check-double"></i></div>
+                        <h3>Solved Papers</h3>
+                        <p>Complete solutions for 2021-2024</p>
+                        <span class="badge">7 Papers</span>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-clock"></i></div>
+                        <h3>Exam Pattern</h3>
+                        <p>200 Questions | 3.5 Hours</p>
+                        <span class="badge">800 Marks</span>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <h2>Features</h2>
+                    <div class="feature-grid">
+                        <div class="feature">
+                            <i class="fas fa-search"></i>
+                            <h4>Easy Navigation</h4>
+                            <p>Browse through years and shifts effortlessly</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Responsive Design</h4>
+                            <p>Access on any device - desktop, tablet, or mobile</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-book-open"></i>
+                            <h4>In-Browser Viewing</h4>
+                            <p>View PDFs directly without downloading</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-download"></i>
+                            <h4>Download Option</h4>
+                            <p>Download any paper for offline study</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exam-info">
+                    <h2>Exam Information</h2>
+                    <div class="info-box">
+                        <h4><i class="fas fa-info-circle"></i> NEET PG Exam Pattern</h4>
+                        <ul>
+                            <li><strong>Total Questions:</strong> 200</li>
+                            <li><strong>Total Marks:</strong> 800</li>
+                            <li><strong>Marking Scheme:</strong> +4 for correct, -1 for incorrect</li>
+                            <li><strong>Duration:</strong> 3 hours 30 minutes</li>
+                            <li><strong>Mode:</strong> Computer-based test (CBT)</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box warning">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Important Note</h4>
+                        <p>NBE does not officially publish NEET PG question papers. All papers in this collection are <strong>memory-based reconstructions</strong> compiled by medical education platforms, coaching institutes, and medical experts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about-section" class="content-section" style="display: none;">
+                <h1>About This Repository</h1>
+                <p class="lead">A comprehensive collection of NEET PG question papers and solutions for exam preparation.</p>
+
+                <h2>What's Included</h2>
+                <ul>
+                    <li>NEET PG question papers from 2021-2024</li>
+                    <li>Complete solved papers with detailed solutions</li>
+                    <li>Separate question papers for practice</li>
+                    <li>Both shifts for 2024 exam</li>
+                </ul>
+
+                <h2>How to Use</h2>
+                <ol>
+                    <li>Select any paper from the sidebar navigation</li>
+                    <li>View the PDF directly in your browser</li>
+                    <li>Use the toolbar to zoom, navigate, or download</li>
+                    <li>Practice with question-only papers first</li>
+                    <li>Check your answers with solved papers</li>
+                </ol>
+
+                <h2>Additional Resources</h2>
+                <div class="resources">
+                    <a href="https://www.nishantbhushan.in/neetpgquestionpapers" target="_blank" class="resource-link">
+                        <i class="fas fa-external-link-alt"></i> Dr. Nishant Bhushan (2012-2023)
+                    </a>
+                    <a href="https://collegedunia.com/exams/neet-pg/question-paper" target="_blank" class="resource-link">
+                        <i class="fas fa-external-link-alt"></i> CollegeDunia
+                    </a>
+                    <a href="https://www.adda247.com/school/neet-pg-previous-year-question-paper/" target="_blank" class="resource-link">
+                        <i class="fas fa-external-link-alt"></i> Adda247
+                    </a>
+                    <a href="https://nbe.edu.in" target="_blank" class="resource-link">
+                        <i class="fas fa-external-link-alt"></i> NBE Official Website
+                    </a>
+                </div>
+
+                <h2>Disclaimer</h2>
+                <p class="disclaimer">This repository is for educational purposes only. All question papers are memory-based reconstructions from publicly available sources. For official information, always refer to the NBE official website.</p>
+            </div>
+
+            <div id="pdf-section" class="content-section pdf-viewer" style="display: none;">
+                <div class="pdf-header">
+                    <h2 id="pdf-title">Loading PDF...</h2>
+                    <div class="pdf-controls">
+                        <a id="download-link" href="#" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button onclick="showSection('home')" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Back to Home
+                        </button>
+                    </div>
+                </div>
+                <div class="pdf-container">
+                    <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
